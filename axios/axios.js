@@ -3,7 +3,7 @@ import qs from "qs"
 
 //配置默认请求
 axios.defaults.timeout = 5000;
-axios.defaults.baseURL = 'http://182.254.175.199:4500';
+axios.defaults.baseURL = 'http://lxiaotian.top:4500';
 //线上地址
 // axios.defaults.baseURL = 'xxxxxxx';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';

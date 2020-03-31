@@ -13,7 +13,7 @@
                 <img src="../assets/songslist.png" alt="" width="30" height="30" @click="openBotttomSheet()">
             </div>
         </div>
-        <mu-bottom-sheet :open.sync="open">
+        <mu-bottom-sheet :open.sync="open">     
             <div class="top">
                 <div class="songlen">当前播放<span>({{length}}首)</span></div>
                     <div class="set">
@@ -136,10 +136,17 @@ export default {
              var result = this.fomast(this.duration);
             //  console.log(result);
             this.$store.state.songsinfo.duration = result;
+            //计算歌曲总的时长 换算成秒
+            var fen = result.substr(0,1);
+            var miao = fen * 60;
+            var sult =  result.substring(2,4);
+            var max = miao + parseInt(sult);
+            this.$store.commit("max",max);
             
         },
         updateTime(e){
             this.currentTime = e.target.currentTime;  //获取audio当前播放时间
+            this.$store.commit("dangqian",this.currentTime);
             var time = this.fomast(this.currentTime);
             this.$store.state.songsinfo.currentTime = time;
         },
@@ -147,6 +154,8 @@ export default {
             interval = interval | 0;
             var fen = interval/60 | 0
             var miao = interval % 60
+            // var max = fen*60+miao;
+            // this.$store.commit("max",max);
             if(miao < 10){
                 return `${fen}:0${miao}`
             }else{

@@ -56,7 +56,7 @@ export default {
             modestatus:["循环.png","单曲播放.png","随机播放.png"],
 
             times:"0:00",
-            max:0,
+            max:parseInt(this.$store.state.songsinfo.max),
         }
     },
     created(){
@@ -79,17 +79,14 @@ export default {
             this.defmodestatus = require("../assets/play/"+this.modestatus[2]);
         }
         if(this.$store.state.songsinfo.duration){
-            var fen = this.$store.state.songsinfo.duration.substr(0,1);
-            var miao = fen * 60;
-            var sult =  parseInt(this.$store.state.songsinfo.duration.substr(2,2));
-            // console.log(typeof sult);
-            this.max = miao + sult; 
-            console.log(this.max);
+            // clearInterval(this.timer);
             // this.timer = setInterval(() => {
-            //     this.value1 += 1;
-            //     console.log(this.value1);
+            //     this.value1 = this.$store.state.songsinfo.dangqian;
+            //     // console.log(this.max);
+            //     // console.log(this.value1);
             // if (this.value1 > this.max )
             //      if(this.times == "0:00"){
+            //          this.$store.commit("dangqian",0);
             //          this.value1 = 0;
             //      }
             // }, 1000);
@@ -234,11 +231,23 @@ export default {
     computed:{
       time(){
           return this.$store.state.songsinfo.currentTime 
+      },
+      maxs(){
+          return this.$store.state.songsinfo.max
+      },
+      value(){
+          return this.$store.state.songsinfo.dangqian_time
       }
     },
     watch:{
         time(val,ola){
            this.times =val;
+        },
+        maxs(val,ola){ //监听总时长
+           this.max = parseInt(val);
+        },
+        value(val,ola){   //监听当前播放的时间
+           this.value1 = parseInt(val);
         }
     }
 }

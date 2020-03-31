@@ -16,8 +16,10 @@ const store  = new vuex.Store({
             songsstatus:false,   //播放器状态 暂停或者播放
             playstatus:false,    // 播放器隐藏和显示
             playmode:0,         // 0 列表循环  1 单曲循环 2 随机播放    
-            duration:"",          //歌曲总时间,
-            currentTime:""       //当前所播放的时间
+            duration:"",          //歌曲总时间, 分秒形式
+            currentTime:"" ,      //当前所播放的时间 分秒形式
+            max:"",              //歌曲总长 单位 秒
+            dangqian_time:"",        //当前播放 单位 秒
         },
         gedaninfo:{},          //歌单的歌曲信息      
     },
@@ -52,9 +54,14 @@ const store  = new vuex.Store({
         },
         mode(state,flag){
             state.songsinfo.playmode = flag
+        },
+        max(state,miao){  //总时长 秒
+            state.songsinfo.max = miao;
+        },
+        dangqian(state,miao){ //当前 秒
+            state.songsinfo.dangqian_time = miao
         }
     }
-    
 })
 
 export default store
