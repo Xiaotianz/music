@@ -372,7 +372,7 @@ export default {
       -webkit-box-orient: vertical;
 }
 .icon{
-    width: 23%;
+    width: 30%;
     display: flex;
     justify-content:space-between;
 }

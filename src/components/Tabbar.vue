@@ -1,5 +1,5 @@
 <template>
-<!-- 文字导航 -->
+<!-- 文字导航  -->
     <div class="Tabbar">
         <div class="tabbar">
             <div class="tabbar-icon">
@@ -13,7 +13,7 @@
                 <div class="video">视频</div>
             </div>
         </div>
-    </div>
+    </div> 
 </template>
 
 <script>
@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style>
+
 .Tabbar{
     position: relative;
     font-size:40px;

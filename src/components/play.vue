@@ -264,7 +264,7 @@ export default {
     color: #8c8c8c
 }
 .play_right{
-    width: 26%;
+    width: 30%;
     padding: 25px 40px 0 20px;
 }
 .play_bofang{

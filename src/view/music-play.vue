@@ -13,7 +13,7 @@
           </div>
       </div>
       <div class="content">
-          <div><img :src="this.$store.state.songsinfo.picurl" alt="" width="800" height="800" :style="run"></div>
+         <div><img :src="this.$store.state.songsinfo.picurl" alt="" width="800" height="800" :style="run"></div>
       </div>
       <div class="bottom">
           <div class="icon_play">
@@ -259,13 +259,12 @@ p{
     padding: 0;
 }
 .music-play{
-    height: 100%;
     display: flex;
     flex-direction:column;
-    background: #3e3c3f
+    background: #3e3c3f;
+    height: 100vh;
 }
 .music-play .top{
-    height: 10%;
     width: 100%;
     /* padding: 30px 0 0 30px; */
     display: flex;
@@ -293,13 +292,15 @@ p{
     padding-top: 30px;
 }
 .content{
-    height: 60%;
+    /* padding:16% 0; */
+    flex-grow: 1;
 }
 .content div{
     width: 100%;
     height: 100%;
-    padding:30% 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .content img{
     width: 800px;
@@ -312,7 +313,7 @@ p{
 	-o-animation: rotateArround 35s  linear 0s normal;
 }
 .bottom{
-    height: 40%;
+    margin-bottom: 30px;
 }
 .bottom .icon_play{
     display: flex;
