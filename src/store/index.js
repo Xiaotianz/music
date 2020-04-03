@@ -40,6 +40,11 @@ const store  = new vuex.Store({
         gedanid(state,gedaninfo){
             state.gedaninfo = gedaninfo
         },
+        // 添加歌曲到歌单
+        addsongs(state,songs){
+            console.log(typeof songs);
+            // console.log(songs);
+        },
         //切歌索引
         index(state,flag){
             state.songsinfo.index = flag;
