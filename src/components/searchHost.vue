@@ -1,11 +1,20 @@
 <template>
     <div class="searchHost">
+<<<<<<< HEAD
         <div class="search_jilu" v-show="show">
             <div style="font-size:12px;font-weight: 500;height:30px;line-height: 20px">历史记录</div>
             <div style="padding-right: 8px;"><img src="../assets/回收站.png" alt="" width="24" height="24" @click="dele()"></div>
         </div>
         <div class="lishijulu" style="padding-top: 5px;margin-bottom:20px">
             <mu-chip class="demo-chip" v-for="(chip,index) in chips" :key="chip" color="primary" @delete="remove(index)" delete @click="childclick(chip)">{{chip}}</mu-chip>
+=======
+        <div class="search_jilu">
+            <div style="font-size:12px;font-weight: 500;height:30px;line-height: 20px">历史记录</div>
+            <div style="padding-right: 8px;"><img src="../assets/回收站.png" alt="" width="24" height="24"></div>
+        </div>
+        <div class="lishijulu" style="padding-top: 5px;margin-bottom:20px">
+            <mu-chip class="demo-chip" v-for="(chip,index) in chips" :key="chip" :color="chip" @delete="remove(index)" delete>{{chip}}</mu-chip>
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
         </div>
         <div style="font-size:14px;">热搜榜</div>
 
@@ -24,6 +33,7 @@
 
 <script>
 import axios from "../../axios/axios"
+<<<<<<< HEAD
 
 export default {
     data(){
@@ -31,6 +41,14 @@ export default {
             chips:[],
             searchHost:[],
             show:false,
+=======
+const initChips = ['primary', 'secondary', 'success', ];
+export default {
+    data(){
+        return{
+            chips: [...initChips],
+            searchHost:[],
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
         }
     },
     created(){
@@ -42,6 +60,7 @@ export default {
             console.error(err); 
         })
     },
+<<<<<<< HEAD
     mounted(){
         if(localStorage.getItem("jilu")){
             this.chips = localStorage.getItem("jilu").split(",") || [];
@@ -49,10 +68,13 @@ export default {
             this.chips = [];
         }
     },
+=======
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
     methods:{
         childclick(searchWord){
             // console.log(searchWord);
             this.$emit("child_searchWord",searchWord);
+<<<<<<< HEAD
         },
         remove(index){
             this.chips.splice(index,1);
@@ -78,6 +100,8 @@ export default {
             }else{
                 this.show = true ;
             }
+=======
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
         }
     }
 }

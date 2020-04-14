@@ -6,11 +6,21 @@
             <img src="../assets/歌手.png" alt="" width="28" height="28" class="geshouxinxi">
        </div>
 
+<<<<<<< HEAD
 
        <searchHost class="ces" v-if="host_switch" @child_searchWord="child_searchWord"></searchHost>
        <searchSong v-if="search_switch" :search_data="search_songinfo" class="ces"></searchSong>
 
 
+=======
+       <searchHost class="ces" v-if="host_switch" @child_searchWord="child_searchWord"></searchHost>
+
+       <searchSong v-if="search_switch" :search_data="search_songinfo" class="ces"></searchSong>
+
+
+
+
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
        <div class="search-tishi" v-show="open">
            <div class="contents">
                <div class="sosuo sosuocolor" @click="sosuo(value)">
@@ -40,6 +50,10 @@ export default {
             suggest:[], //搜索建议
             search_songinfo:[], //搜索歌曲信息
             flag:true,
+<<<<<<< HEAD
+=======
+            array:[],
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
         }
     },
     methods:{
@@ -63,8 +77,13 @@ export default {
                 this.search_switch = true;
                 this.open = false;
             }
+<<<<<<< HEAD
             //添加搜索记录
             this.$store.commit("searchjilu",keywords);
+=======
+            this.array.push(keywords);
+            console.log(this.array);
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
         },
         child_searchWord(val){
             if(val){

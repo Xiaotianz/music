@@ -40,9 +40,15 @@ export default {
         play(id){
             songurl.songsurl(id).then(res=>{
                     this.$store.commit("songurl",res);
+<<<<<<< HEAD
                     this.$store.commit("play",false);
                     this.$router.push({path:"/play",name:"play"});
                     this.$store.commit("status",true);
+=======
+                    this.$store.commit("play",true);
+                    this.$store.commit("status",true);
+                
+>>>>>>> f85217584cd9acd94b66b1080309c50d3db2a2de
             }).catch(err=>{
                 this.$store.commit("songurl","");
                 alert("歌曲暂时没有版权");
