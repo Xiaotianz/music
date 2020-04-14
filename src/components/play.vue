@@ -251,13 +251,9 @@ export default {
     line-height: 42px;
     padding-left: 18px;
     font-size: 28px;
-    text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    display: -webkit-box;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
-      -webkit-box-orient: vertical;
 }
 .geci{
     font-size: 22px;

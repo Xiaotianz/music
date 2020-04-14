@@ -4,7 +4,7 @@
         <div class="tabbar">
             <div class="tabbar-icon">
                 <img src="../assets/navicon.png" alt="" class="icon-bar" width="20" height="20">
-                <img src="../assets/search.png" alt="" class="icon-search" width="20" height="20">
+                <img src="../assets/search.png" alt="" class="icon-search" width="20" height="20" @click="go_search()">
             </div>
             <div class="tabbar-nav">
                 <div class="My-music">我的</div>
@@ -18,6 +18,18 @@
 
 <script>
 export default {
+    data(){
+        return{
+            
+        }
+    },
+    methods:{
+        go_search(){
+            this.$router.push({
+                name:"search",
+            });
+        }
+    }
 }
 </script>
 

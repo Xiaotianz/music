@@ -251,7 +251,7 @@ export default {
     border-radius: 30px 30px 0 0 ;
 }
 .songstop{
-        padding:50px 40px 0 40px;
+    padding:50px 40px 0 40px;
 }
 .songslistnav{
     display: flex;
@@ -362,14 +362,9 @@ export default {
 .songinfo .geshou{
     font-size: 30px;
     color: #8c8c8c;
-
-    text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    display: -webkit-box;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
-      -webkit-box-orient: vertical;
 }
 .icon{
     width: 30%;
