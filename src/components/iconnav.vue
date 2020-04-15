@@ -2,11 +2,11 @@
     <div>
         <!-- 图标导航 -->
         <div class="icon-nav">
-            <div class="nav-text">
+            <div class="nav-text" @click="dayrec">
                  <img src="../assets/tuijian.png" alt="" width="48" height="48">
                  <span>每日推荐</span>
             </div>
-            <div class="nav-text">
+            <div class="nav-text" @click="gedan">
                  <img src="../assets/tuijian.png" alt="" width="48" height="48">
                  <span>歌单</span>
             </div>
@@ -29,7 +29,14 @@
 
 <script>
 export default {
-    
+    methods:{
+        dayrec(){
+            this.$router.push({name:"dayrec"});
+        },
+        gedan(){
+            this.$router.push({name:"gedan"});
+        }
+    }
 }
 </script>
 

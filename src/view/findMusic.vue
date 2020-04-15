@@ -83,6 +83,7 @@ export default {
     }
     .wenben{
         margin-top: 70px;
+        margin-bottom: 35px;
         display: flex;
         justify-content: space-between;
     }
@@ -98,6 +99,7 @@ export default {
     }
     .wenbeninfo{
          margin-top: 40px;
+         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
     }

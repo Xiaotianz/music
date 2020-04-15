@@ -60,15 +60,17 @@
                     <img src="../assets/play.png" alt="" width="20" height="20">
                     <div>播放全部<span class="allsongs" @click="all()">(共{{this.allsongsLenght}}首)</span></div>
                 </div>
-                <div class="songlist" v-for="(item, index) in songslistdata.tracks" :key="item.id">
-                    <div class="index">{{index+1}}</div>
-                    <div :class="activeClass == index ? 'clicks':'songinfo' " @click="play_info(item.name,item.ar[0].name,item.al.picUrl,item.id,index);songsurl(item.id)" >
-                        <div class="songsname">{{item.name}}</div>
-                        <div class="geshou">{{item.ar[0].name}} - {{item.al.name}}</div>
-                    </div>
-                    <div class="icon">
-                        <img src="../assets/palymusic.png" alt="" width="24" height="24" class="play-icon" @click="play_info(item.name,item.ar[0].name)">
-                        <img src="../assets/sandian-hui.png" alt="" width="26" height="26">
+                <div class="listss">
+                    <div class="songlist" v-for="(item, index) in songslistdata.tracks" :key="item.id">
+                        <div class="index">{{index+1}}</div>
+                        <div :class="activeClass == index ? 'clicks':'songinfo' " @click="play_info(item.name,item.ar[0].name,item.al.picUrl,item.id,index);songsurl(item.id)" >
+                            <div class="songsname">{{item.name}}</div>
+                            <div class="geshou">{{item.ar[0].name}} - {{item.al.name}}</div>
+                        </div>
+                        <div class="icon">
+                            <img src="../assets/palymusic.png" alt="" width="24" height="24" class="play-icon" @click="play_info(item.name,item.ar[0].name)">
+                            <img src="../assets/sandian-hui.png" alt="" width="26" height="26">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -376,5 +378,8 @@ export default {
     width: 70%;
     padding-right: 15px;
     color: red;
+}
+.listss{
+    margin-bottom: 150px;
 }
 </style>
