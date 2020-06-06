@@ -34,7 +34,7 @@ export default {
             this.$router.push({name:"dayrec"});
         },
         gedan(){
-            this.$router.push({name:"gedan"});
+            this.$router.push({path:"gedan/huayu"});
         }
     }
 }

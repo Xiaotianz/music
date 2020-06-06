@@ -5,15 +5,8 @@
                 <img src="../assets/后退.png" alt="" width="24" height="24">
                 <div class="wenzi">歌单广场</div>
             </div>
-                <div class="gedan-tab">
-                    <mu-tabs ripple="false" full-width>
-                        <mu-tab to="/gedan/huayu">华语</mu-tab>
-                        <mu-tab to="/gedan/gufeng">古风</mu-tab>
-                        <mu-tab to="/gedan/omei">欧美</mu-tab>
-                        <mu-tab to="/gedan/liuxing">流行</mu-tab>
-                        <mu-tab to="/gedan/yaogun">摇滚</mu-tab>
-                        <mu-tab to="/gedan/dianzi">电子</mu-tab>
-                    </mu-tabs>
+                <div class="gedan-tab" ref>
+                    
                 </div>
         </div>
         <router-view class="roulink"></router-view>
@@ -50,26 +43,9 @@ export default {
     margin-top: 40px;
     width: 100%;
 }
-.mu-tabs{
-    height: 130px;
-    background: #fff;
-    display: flex;
-    width: 100%;
-    overflow: auto;
 
-}
-.mu-tab {
-    min-width: none;
-    max-width: none;
-    width: 25%;
-    font-size: 40px;
-    color: black;
-    height:100%;
-    line-height: 120px;
-}
-.mu-tab-active {
-    color:#ff2400
-}
+
+
 .roulink{
     flex: 1;
 }
